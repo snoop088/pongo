@@ -1,0 +1,20 @@
+<form [ngFormModel]="_form">
+    <div>
+        <label for="searchtext">Search</label>
+        <md-input placeholder="Search item" 
+        ngControl="searchtext" 
+        #searchtext="ngForm"
+        id="searchtext">
+            <md-hint>Enter min 4 letters</md-hint></md-input>
+        <div *ngIf="searchtext.errors && searchtext.touched">
+            <div *ngIf="searchtext.errors.required" >Error Required!</div>
+            <div *ngIf="searchtext.errors.minlength" >Minlength required!</div>
+        </div>
+    </div>
+    <!--<input type="text" >-->
+    <md-radio-group [(ngModel)]="_searchType">
+        <md-radio-button name="select-type" value="artist">Artists</md-radio-button>
+        <md-radio-button value="track" name="select-type">Tracks</md-radio-button>
+        <md-radio-button value="album" name="select-type">Albums</md-radio-button>
+    </md-radio-group>
+</form>

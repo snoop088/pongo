@@ -1,3 +1,11 @@
-<h1>
-  {{title}}
-</h1>
+<header>
+  <h1>
+    {{title}}
+  </h1>  
+</header>
+<section>
+  <search-form (startSearch)="_getSearchParams($event)"></search-form>
+</section>
+<section>
+  <view-results></view-results>
+</section>
