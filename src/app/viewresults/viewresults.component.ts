@@ -1,12 +1,13 @@
 import { Component, OnInit, Input, OnChanges, SimpleChange } from '@angular/core';
-import { ArtistComponent } from '../artist'
+import { ArtistComponent } from '../artist';
+import { TrackComponent } from '../track';
 
 @Component({
   moduleId: module.id,
   selector: 'view-results',
   templateUrl: 'viewresults.component.html',
   styleUrls: ['viewresults.component.css'],
-  directives: [ArtistComponent]
+  directives: [ArtistComponent, TrackComponent]
 })
 export class ViewresultsComponent implements OnInit, OnChanges {
   @Input() private _data: {}[];

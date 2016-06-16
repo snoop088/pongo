@@ -14,7 +14,9 @@
             
         </template>
         <template [ngSwitchWhen]="'track'">
-            showing tracks
+            <li *ngFor="let track of _receivedData.tracks.items">
+                <strack [_trackData]="track"></strack>
+            </li>
         </template>
         <template [ngSwitchWhen]="'album'">
             showing albums

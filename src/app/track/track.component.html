@@ -1,3 +1,17 @@
-<p>
-  track works!
-</p>
+<md-card>
+    <md-card-title>{{_trackName}}</md-card-title>
+    <md-card-subtitle>Popularity: {{_trackPopularity}} | 
+        <a [hidden]="!_previewUrl" [href]="_previewUrl" target="_blank">preview</a>
+    </md-card-subtitle>
+    <md-card-content>
+    <p>
+        Artists:
+        <span *ngFor="let myartist of _trackArtists" class="track-artist-name">
+          <a [href]="myartist.url" target="_blank">{{myartist.name}}</a> 
+          <span>|</span>
+        </span>
+    </p>
+    <p>Find on Spotify <a [href]="_trackUrl" target="_blank">here</a></p>
+    </md-card-content>
+    <i class="material-icons audio-track">audiotrack</i>
+</md-card>

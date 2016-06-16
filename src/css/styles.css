@@ -36,6 +36,7 @@ md-radio-button {
     padding: 10px;
 }
 md-card {
+    position: relative;
     width: 100%;    
 }
 .spotify {
@@ -74,4 +75,13 @@ header .material-icons {
     font-size: 0.8em;
     color: #c81d31;
 }
-
+.track-artist-name:last-of-type > span {
+    display: none;
+}
+.audio-track {
+    position: absolute;
+    bottom: 10px; right: 10px;
+    color: #A2C67D;
+    font-size: 2.5em;
+    opacity: 0.3;
+}
