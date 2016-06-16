@@ -50,6 +50,7 @@ const barrels: string[] = [
   'app/viewtracks',
   'app/artist',
   'app/track',
+  'app/artist-component',
   /** @cli-barrel */
 ];
 

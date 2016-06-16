@@ -20,7 +20,6 @@ export class SearchformComponent implements OnInit {
   @Output() startSearch = new EventEmitter();
   private _searchType: string = "artist";
   private _form : ControlGroup;
-
     constructor(private _fb: FormBuilder) {
         
     }
@@ -29,7 +28,6 @@ export class SearchformComponent implements OnInit {
     this._form = this._fb.group( {
             searchtext: ['', Validators.compose([Validators.required, 
             Validators.minLength(4)])],
-            
         });
         
         let searchTextInput = this._form.find('searchtext');
@@ -46,6 +44,19 @@ export class SearchformComponent implements OnInit {
           })
         });
         
+  }
+  private _radioChange($event):void {
+    if (this._form.valid) {
+      let searchTextInputValue = 
+        this._form.find('searchtext').value;
+      
+      this.startSearch.emit ({
+        'searchText': searchTextInputValue,
+        'searchType': this._searchType
+      })
+      
+      //console.log("Input = " + searchTextInputValue + "Type = " + this._searchType)
+    }
   }
 
 

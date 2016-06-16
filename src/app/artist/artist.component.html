@@ -1,3 +1,11 @@
-<p>
-  artist works!
-</p>
+<md-card>
+   <md-card-header>
+      <img md-card-avatar [src]="_imgThumb">
+      <md-card-title>{{_artistName}}</md-card-title>
+      <md-card-subtitle>Popularity: {{_artistPopularity}}</md-card-subtitle>
+   </md-card-header>
+   <img md-card-image [src]="_imgUrl">
+   <md-card-content>
+      <p>Listen on Spotify <a [href]="_artistUrl" target="_blank">here</a></p>
+   </md-card-content>
+</md-card>

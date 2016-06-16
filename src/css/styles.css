@@ -1,5 +1,77 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
-    background: #fe5511;
+    background: #f0f0f0;
+    font-family: Arvo, Arial, Helvetica, sans-serif;
 }
+header {
+    padding: 0 80px 0 40px;
+    background: #3a3a2a;
+    color: #fff;
+    overflow: auto;
+    position: relative;
+    border-bottom: 1px solid #fff;
+}
+a {
+    text-decoration: none;
+    color: #5d5859;
+}
+a:hover {
+    text-decoration: none;
+    color: #a2c67d;
+}
+
+section {
+    float: left;
+    padding: 0 40px;
+    width: 100%;
+}
+md-input {
+    width: 100%;
+}
+md-radio-button {
+    padding: 10px;
+}
+md-card {
+    width: 100%;    
+}
+.spotify {
+    color: #A2C67D;
+}
+header .material-icons {
+    position: absolute;
+    font-size: 3em;
+    margin-top: -0.5em;
+    top:50%; right: 40px;
+    color: #695c57;
+}
+.search-input, .search-type {
+    float: left;
+    width: 50%;
+    padding: 0 20px;
+}
+.search-form {
+    margin: 0 -20px;
+    width: 100%;
+    float: left;
+}
+.search-results {
+    margin: 0; padding: 0;
+}
+.search-results li {
+    display: inline-block;
+    list-style: none;
+    vertical-align: top;
+    width: 23%;
+    margin: 20px 1%;
+    padding: 0;
+}
+.error-input {
+    margin-top: 4px;
+    font-size: 0.8em;
+    color: #c81d31;
+}
+
