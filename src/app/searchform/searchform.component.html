@@ -1,10 +1,11 @@
-<form [ngFormModel]="_form">
+<form #f="ngForm" [formGroup]="_form">
     <div class="search-input">
         <md-input placeholder="Search item" 
-        ngControl="searchtext" 
-        #searchtext="ngForm"
-        id="searchtext">
-            <md-hint>Enter 4 letters or more</md-hint></md-input>
+            [ngModel] = "_searchtext" #searchtext = "ngModel"
+            name="searchtext"
+            id="searchtext">
+            <md-hint>Enter 4 letters or more</md-hint>
+        </md-input>
         <div *ngIf="searchtext.errors && searchtext.touched">
             <div *ngIf="searchtext.errors.required" class="error-input">This field is required.</div>
             <div *ngIf="searchtext.errors.minlength" class="error-input">Search required minimum of {{searchtext.errors.minlength.requiredLength}} letters</div>
@@ -12,7 +13,7 @@
     </div>
     <div class="search-type">
     <!--<input type="text" >-->
-        <md-radio-group [(ngModel)]="_searchType" 
+        <md-radio-group [(ngModel)]="_searchType" name="searchtype"
         (change)="_radioChange($event)">
             <md-radio-button name="select-type" value="artist">Artists</md-radio-button>
             <md-radio-button value="track" name="select-type">Tracks</md-radio-button>

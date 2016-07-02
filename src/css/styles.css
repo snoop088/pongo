@@ -31,6 +31,11 @@ section {
 }
 md-input {
     width: 100%;
+    overflow: visible !important;
+}
+md-hint {
+    position: relative;
+    float: left;
 }
 md-radio-button {
     padding: 10px;
@@ -61,17 +66,21 @@ header .material-icons {
 }
 .search-results {
     margin: 0; padding: 0;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-flow: wrap;
 }
 .search-results li {
-    display: inline-block;
+    
+    /*display: inline-block;*/
     list-style: none;
-    vertical-align: top;
+    /*vertical-align: top;*/
     width: 23%;
     margin: 20px 1%;
     padding: 0;
 }
 .error-input {
-    margin-top: 4px;
+    margin-top: 6px;
     font-size: 0.8em;
     color: #c81d31;
 }
@@ -84,4 +93,19 @@ header .material-icons {
     color: #A2C67D;
     font-size: 2.5em;
     opacity: 0.3;
+}
+@media screen and (max-width: 1200px) {
+    .search-results li {
+        width: 31%;
+    }
+}
+@media screen and (max-width: 780px) {
+    .search-results li {
+        width: 48%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .search-results li {
+        width: 100%;
+    }
 }

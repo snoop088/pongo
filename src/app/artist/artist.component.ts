@@ -10,6 +10,7 @@ import {MD_CARD_DIRECTIVES} from '@angular2-material/card';
 })
 export class ArtistComponent implements OnInit {
   @Input() private _artistData: any;
+  
   private _imgUrl:string;
   private _imgThumb:string;
   private _artistName:string;

@@ -6,19 +6,19 @@
     </h3>
 
     <ul [ngSwitch]="_type" class="search-results">
-        <template [ngSwitchWhen]="'artist'" ngSwitchDefault>
+        <template [ngSwitchCase]="'artist'" ngSwitchDefault>
             <li
               *ngFor="let artist of _receivedData.artists.items">
                 <artist [_artistData]="artist"></artist>
             </li>
             
         </template>
-        <template [ngSwitchWhen]="'track'">
+        <template [ngSwitchCase]="'track'">
             <li *ngFor="let track of _receivedData.tracks.items">
                 <strack [_trackData]="track"></strack>
             </li>
         </template>
-        <template [ngSwitchWhen]="'album'">
+        <template [ngSwitchCase]="'album'">
             showing albums
         </template>
     </ul>
