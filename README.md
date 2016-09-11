@@ -2,6 +2,7 @@
 ## Pongo Spotify Searcher
 
 Personal test project to learn basics of Angular 2 with Typerscript. Based on various tutorials. Includes few topics in Angular 2
+
 1. Components
 2. Forms
 3. Observable for keypresses
